@@ -12,7 +12,7 @@ const config: Config = {
   },
 
   url: 'https://AMNAMENGRANI.github.io',
-  baseUrl: '/',
+  baseUrl: '/hackathon_textbook_ai_robotics/',
 
   organizationName: 'AMNAMENGRANI',
   projectName: 'hackathon_textbook_ai_robotics',
