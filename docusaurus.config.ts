@@ -11,13 +11,13 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://AMNAMENGRANI.github.io',
+  url: 'https://amnamengrani.github.io', // lowercase is better for consistency
   baseUrl: '/hackathon_textbook_ai_robotics/',
 
   organizationName: 'AMNAMENGRANI',
   projectName: 'hackathon_textbook_ai_robotics',
+  deploymentBranch: 'gh-pages', // explicitly set deployment branch
 
-  // Change from 'throw' to 'warn' temporarily to allow build
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -41,9 +41,6 @@ const config: Config = {
             xslt: true,
           },
           editUrl: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics/edit/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -80,7 +77,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        { title: 'Textbook', items: [{ label: 'Introduction', to: '/docs/intro' }] },
+        { title: 'Textbook', items: [{ label: 'Introduction', to: '/docs/quickstart' }] },
         { title: 'Resources', items: [
             { label: 'ROS 2 Documentation', href: 'https://docs.ros.org/en/humble/' },
             { label: 'NVIDIA Isaac', href: 'https://developer.nvidia.com/isaac' },
@@ -97,6 +94,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    trailingSlash: false, // recommended for GitHub Pages
   } satisfies Preset.ThemeConfig,
 };
 
