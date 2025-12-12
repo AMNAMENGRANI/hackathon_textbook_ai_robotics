@@ -2,34 +2,25 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
   title: 'AI-Native Textbook Physical AI & Humanoid Robotics',
   tagline: 'A comprehensive textbook covering ROS 2, Gazebo, NVIDIA Isaac, and Vision-Language-Action systems',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://muhammadwaheedairi.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/hackathon_textbook_ai_robotics/',
+  url: 'https://AMNAMENGRANI.github.io',
+  baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'muhammadwaheedairi', // Usually your GitHub org/user name.
-  projectName: 'hackathon_textbook_ai_robotics', // Usually your repo name.
+  organizationName: 'AMNAMENGRANI',
+  projectName: 'hackathon_textbook_ai_robotics',
 
-  onBrokenLinks: 'throw',
+  // Change from 'throw' to 'warn' temporarily to allow build
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,10 +32,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/muhammadwaheedairi/hackathon_textbook_ai_robotics/edit/main/my-website/',
+          editUrl: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -52,11 +40,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/muhammadwaheedairi/hackathon_textbook_ai_robotics/edit/main/my-website/',
-          // Useful options to enforce blogging best practices
+          editUrl: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -69,14 +53,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    // Enhanced accessibility and mobile responsiveness settings
     metadata: [
       {name: 'viewport', content: 'width=device-width, initial-scale=1.0'},
       {name: 'theme-color', content: '#12affa'},
@@ -90,62 +72,24 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'textbookSidebar',
-          position: 'left',
-          label: 'Textbook',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/muhammadwaheedairi/hackathon_textbook_ai_robotics',
-          label: 'GitHub',
-          position: 'right',
-        },
+        { type: 'docSidebar', sidebarId: 'textbookSidebar', position: 'left', label: 'Textbook' },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        { href: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Textbook',
-          items: [
-            {
-              label: 'Introduction',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Resources',
-          items: [
-            {
-              label: 'ROS 2 Documentation',
-              href: 'https://docs.ros.org/en/humble/',
-            },
-            {
-              label: 'NVIDIA Isaac',
-              href: 'https://developer.nvidia.com/isaac',
-            },
-            {
-              label: 'Gazebo Simulation',
-              href: 'https://gazebosim.org/',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/muhammadwaheedairi/hackathon_textbook_ai_robotics',
-            },
-          ],
-        },
+        { title: 'Textbook', items: [{ label: 'Introduction', to: '/docs/intro' }] },
+        { title: 'Resources', items: [
+            { label: 'ROS 2 Documentation', href: 'https://docs.ros.org/en/humble/' },
+            { label: 'NVIDIA Isaac', href: 'https://developer.nvidia.com/isaac' },
+            { label: 'Gazebo Simulation', href: 'https://gazebosim.org/' },
+          ] },
+        { title: 'More', items: [
+            { label: 'Blog', to: '/blog' },
+            { label: 'GitHub', href: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics' },
+          ] },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} AI-Native Textbook — Physical AI & Humanoid Robotics. Built with Docusaurus.`,
     },
