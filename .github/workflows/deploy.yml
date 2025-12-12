@@ -1,27 +1,25 @@
-name: Deploy Docusaurus site to GitHub Pages
+name: Deploy Docusaurus to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 24
+          node-version: 18
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
-      - name: Build Docusaurus site
+      - name: Build website
         run: yarn build
 
       - name: Deploy to GitHub Pages
