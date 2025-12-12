@@ -70,7 +70,6 @@ const config: Config = {
       },
       items: [
         { type: 'docSidebar', sidebarId: 'textbookSidebar', position: 'left', label: 'Textbook' },
-        { to: '/blog', label: 'Blog', position: 'left' },
         { href: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics', label: 'GitHub', position: 'right' },
       ],
     },
@@ -84,7 +83,6 @@ const config: Config = {
             { label: 'Gazebo Simulation', href: 'https://gazebosim.org/' },
           ] },
         { title: 'More', items: [
-            { label: 'Blog', to: '/blog' },
             { label: 'GitHub', href: 'https://github.com/AMNAMENGRANI/hackathon_textbook_ai_robotics' },
           ] },
       ],
