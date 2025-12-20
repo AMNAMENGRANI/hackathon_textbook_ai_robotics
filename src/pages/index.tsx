@@ -26,7 +26,7 @@ function HomepageHeader() {
         </div>
         <img
           className={styles.heroImage}
-          src="/1.webp"
+          src="/hero.webp"
           alt="Physical AI & Humanoid Robotics"
         />
       </div>
