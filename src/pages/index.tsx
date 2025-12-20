@@ -26,7 +26,7 @@ function HomepageHeader() {
         </div>
         <img
           className={styles.heroImage}
-          src="/robotik.jpg"
+          src="https://pngtree.com/so/a-small-robot"
           alt="Physical AI & Humanoid Robotics"
         />
       </div>
