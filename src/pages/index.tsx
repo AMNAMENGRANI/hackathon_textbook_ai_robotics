@@ -23,7 +23,6 @@ function HomepageHeader() {
               View on GitHub
             </Link>
           </div>
-
     </header>
   );
 }
