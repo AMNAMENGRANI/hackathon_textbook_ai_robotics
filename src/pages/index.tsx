@@ -23,13 +23,7 @@ function HomepageHeader() {
               View on GitHub
             </Link>
           </div>
-        </div>
-        <img
-          className={styles.heroImage}
-          src="/hero.webp"
-          alt="Physical AI & Humanoid Robotics"
-        />
-      </div>
+
     </header>
   );
 }
