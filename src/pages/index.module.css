@@ -1,19 +1,72 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: white;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(96, 165, 250, 0.15) 0%, transparent 50%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroText {
+  max-width: 600px;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.heroText p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 120px rgba(59, 130, 246, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.heroImage:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 35px 90px rgba(0,0,0,0.8), 0 0 150px rgba(59,130,246,0.6);
 }
 
 .buttons {
@@ -24,22 +77,83 @@
   flex-wrap: wrap;
 }
 
-.features {
+.buttonPrimary {
+  background: #3b82f6;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.buttonPrimary:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.buttonSecondary {
+  background: transparent;
+  border: 2px solid #60a5fa;
+  color: #60a5fa;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.buttonSecondary:hover {
+  background: rgba(96, 165, 250, 0.1);
+  transform: translateY(-2px);
+}
+
+.features, .modules {
   padding: 4rem 0;
-  background-color: #f9f9f9;
+}
+
+.features {
+  background-color: #0f172a;
+  color: #e2e8f0;
 }
 
 .modules {
-  padding: 2rem 0;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
 }
 
-@media screen and (max-width: 996px) {
-  .features {
-    padding: 2rem 0;
-  }
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .modules {
-    padding: 2rem 0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.card__header h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card__body p {
+  color: #475569;
+}
+
+.card__footer .button {
+  width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+  .heroContent {
+    flex-direction: column;
+  }
+  .heroText {
+    text-align: center;
   }
 }
